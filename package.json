@@ -1,0 +1,57 @@
+{
+  "name": "treacherous-decorators",
+  "version": "0.1.0",
+  "dependencies": {
+    "treacherous": "^0.16.2"
+  },
+  "bugs": {
+    "url": "https://github.com/grofit/treacherous-decorators/issues"
+  },
+  "main": "dist/commonjs/index.js",
+  "typings": "dist/definitions/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grofit/treacherous-decorators"
+  },
+  "scripts": {
+    "test": "karma start --single-run --browsers PhantomJS ./karma.conf.js"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.8",
+    "@types/chai": "^4.0.1",
+    "@types/chai-spies": "^0.0.0",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.26",
+    "reflect-metadata": "^0.1.10",
+    "bluebird": "^3.5.0",
+    "chai": "^4.1.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-spies": "^0.7.1",
+    "core-js": "^2.5.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-bump": "^2.7.0",
+    "gulp-es6-exporter": "^0.0.5",
+    "gulp-rename": "^1.2.2",
+    "gulp-typescript": "^3.2.1",
+    "gulp-uglify": "^3.0.0",
+    "karma": "^1.7.0",
+    "karma-chai": "^0.1.0",
+    "karma-chai-as-promised": "^0.1.2",
+    "karma-chai-spies": "^0.1.4",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-webpack": "^2.0.4",
+    "merge2": "^1.0.3",
+    "mkdirp": "^0.5.1",
+    "mocha": "^3.5.0",
+    "phantomjs-prebuilt": "^2.1.15",
+    "require-dir": "^0.3.2",
+    "rimraf": "^2.6.1",
+    "ts-loader": "^2.3.4",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5",
+    "webpack-stream": "^4.0.0"
+  }
+}
