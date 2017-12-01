@@ -1,9 +1,10 @@
-import {Ruleset, RuleLink, ForEachRule, IModelResolver} from "treacherous";
+import {Ruleset, RuleLink, ForEachRule} from "treacherous";
 import {getRulesetFromMetadata, updateRulesetMetadata} from "../helpers/metadata-helper";
+import {AppliesIfFunction, MessageOverrideFunction} from "./method-types";
 
 export function withRuleForEach(ruleName: string, ruleOptions?: any, 
-    appliesIf?: (modelResolver: IModelResolver, value: any, ruleOptions?: any) => boolean | boolean, 
-    messageOverride?: (value: any, ruleOptions?: any) => string | string) {
+    appliesIf?: boolean | AppliesIfFunction, 
+    messageOverride?: string | MessageOverrideFunction) {
     
     return function(target: Object, propertyKey: string) : void
     {
@@ -18,5 +19,5 @@ export function withRuleForEach(ruleName: string, ruleOptions?: any,
 
         existingRuleset.addRule(propertyKey, new ForEachRule<RuleLink>(ruleLink));
         updateRulesetMetadata(target, existingRuleset);
-    }
+    };
 }

@@ -14,7 +14,7 @@ class RuleExample1
 
 class RuleExample2
 {
-    @withRule("minLength", 10, (x) => true)
+    @withRule("minLength", 10, (x) => true, "message override")
     public name = "";
 }
 
@@ -38,7 +38,7 @@ describe('With Rule Decorator Tests', function () {
         verifyRuleset(rulesetFromType);
     });
 
-    it('should correctly apply rules with appliesIf predicate to object', function () {
+    it('should correctly apply rules with appliesIf predicate and message override to object', function () {
         
         const instance = new RuleExample2();
         const rulesetFromInstance = createRulesetFor(instance);
@@ -52,6 +52,7 @@ describe('With Rule Decorator Tests', function () {
             expect(ruleset.rules["name"][0].appliesIf).is.not.undefined;
             expect(typeof ruleset.rules["name"][0].appliesIf).to.equal("function");
             expect(ruleset.rules["name"][0].appliesIf()).to.be.true;
+            expect(ruleset.rules["name"][0].messageOverride).to.equal("message override");
         };
 
         verifyRuleset(rulesetFromInstance);

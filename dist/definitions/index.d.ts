@@ -1,4 +1,5 @@
 export * from "./exposer";
+export * from "./decorators/method-types";
 export * from "./decorators/with-display-name";
 export * from "./decorators/with-rule-foreach";
 export * from "./decorators/with-rule";

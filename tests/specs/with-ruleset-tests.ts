@@ -20,7 +20,6 @@ class RulesetExample1
 }
 
 describe('With Ruleset Decorator Tests', function () {
-
     
     it('should correctly add ruleset to object', function () {       
         
