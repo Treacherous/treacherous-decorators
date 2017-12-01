@@ -8,5 +8,5 @@ export function withDisplayName(displayName: string) {
         const existingRuleset = getRulesetFromMetadata(target);
         existingRuleset.propertyDisplayNames[propertyKey] = displayName;
         updateRulesetMetadata(target, existingRuleset);
-    }
+    };
 }

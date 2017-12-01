@@ -1,5 +1,3 @@
-import "core-js";
-
 import {use, expect, assert, spy} from "chai";
 import {Ruleset, IModelResolver} from "treacherous";
 import * as spies from "chai-spies";

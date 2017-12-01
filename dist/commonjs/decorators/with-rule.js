@@ -14,7 +14,6 @@ function withRule(ruleName, ruleOptions, appliesIf, messageOverride) {
         }
         existingRuleset.addRule(propertyKey, ruleLink);
         metadata_helper_1.updateRulesetMetadata(target, existingRuleset);
-        console.log("RULE", existingRuleset.rules);
     };
 }
 exports.withRule = withRule;

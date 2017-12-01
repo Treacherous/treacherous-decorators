@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { Ruleset } from "treacherous";
 export declare const rulesetMetadataKey: symbol;
 export declare function getRulesetFromMetadata(target: Object | any): Ruleset;

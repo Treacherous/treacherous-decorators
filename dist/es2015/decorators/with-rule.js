@@ -12,6 +12,5 @@ export function withRule(ruleName, ruleOptions, appliesIf, messageOverride) {
         }
         existingRuleset.addRule(propertyKey, ruleLink);
         updateRulesetMetadata(target, existingRuleset);
-        console.log("RULE", existingRuleset.rules);
     };
 }

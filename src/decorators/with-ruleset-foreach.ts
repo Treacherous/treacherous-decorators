@@ -16,5 +16,5 @@ export function withRulesetForEach(ruleset: Ruleset | Object) {
         { existingRuleset.addRuleset(propertyKey, new ForEachRule<Ruleset>(<Ruleset>ruleset)); }
         
         updateRulesetMetadata(target, existingRuleset);
-    }
+    };
 }

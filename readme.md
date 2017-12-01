@@ -6,11 +6,11 @@
 
 Adds the ability to use decorators to setup your model validation rules.
 
-(See more about Treacherous [HERE]
+(See more about Treacherous [HERE](https://github.com/grofit/treacherous))
 
 ## Installing
 
-Just do an 
+Just do an:
 
 ```
 npm install treacherous-decorators
@@ -35,7 +35,7 @@ class SomeModel
 
     @withRule("required")
     @withRule("email")
-    @withRule("matches", "email")
+    @withRule("matches", "emailAddress")
     public confirmEmailAddress = "";
 }
 
@@ -77,9 +77,10 @@ class CommunicationModel
     public emailIsPrimaryContact: boolean;
 
     @withRule("email")
-    @withRule("required", null,
-        (x) => mr.resolve("emailIsPrimarycontact"), 
-        "Email address is required if it is primary contact")
+    @withRule("required",                                       // rule name
+        null,                                                   // rule options
+        (x) => x.resolve("emailIsPrimarycontact"),              // applies if
+        "Email address is required if it is primary contact")   // message override
     public emailAddress: string;
 }
 
@@ -88,20 +89,6 @@ appliesIf?: (modelResolver: IModelResolver, value: any, ruleOptions?: any) => bo
 
 // The signature for the 4th parameter (messageOverride) are
 messageOverride?: (value: any, ruleOptions?: any) => string | string)
-```
-
-### `@withRuleset`
-
-This allows you to indicate that the property is a complex object and should be validated using an existing ruleset. 
-
-The ruleset can be from an actual instance of a ruleset (i.e import it from another file/module) or a type of object which contains decorators defining its validation.
-
-```ts
-class RulesetExample
-{       
-    @withRuleset(WithRuleExample)
-    public basic: WithRuleExample;
-}
 ```
 
 ### `@withRuleset`

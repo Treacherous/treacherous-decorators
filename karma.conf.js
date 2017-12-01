@@ -2,6 +2,7 @@ module.exports = function(config) {
     config.set({
         files: [
             'node_modules/bluebird/js/browser/bluebird.js',
+            'node_modules/reflect-metadata/reflect.js',
             'tests/specs/**/*.ts'
         ],
 
@@ -50,6 +51,7 @@ module.exports = function(config) {
         plugins: [
             require("karma-mocha"),
             require("karma-webpack"),
+            require("karma-chrome-launcher"),
             require("karma-phantomjs-launcher")
         ],
 
