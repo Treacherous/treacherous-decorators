@@ -16,5 +16,5 @@ export function withRuleset(ruleset: Ruleset | Object) {
         { existingRuleset.addRuleset(propertyKey, <Ruleset>ruleset); }
         
         updateRulesetMetadata(target, existingRuleset);
-    }
+    };
 }
