@@ -2,7 +2,7 @@
   "name": "treacherous-decorators",
   "version": "0.2.1",
   "dependencies": {
-    "treacherous": "^0.17.1"
+    "treacherous": "^0.17.2"
   },
   "bugs": {
     "url": "https://github.com/grofit/treacherous-decorators/issues"

@@ -12,9 +12,9 @@ function hasRule(ruleset: Ruleset, ruleName: string, ruleValue: any) {
     expect(ruleset.rules).to.have.property("property");
     expect(ruleset.rules["property"].length).to.equal(1);
 
-    const basicRuleset = ruleset.rules["property"][0];
-    expect(basicRuleset.ruleName).to.equal(ruleName);
-    expect(basicRuleset.ruleOptions).to.equal(ruleValue);
+    const propertyRules = ruleset.rules["property"][0];
+    expect(propertyRules.ruleName).to.equal(ruleName);
+    expect(propertyRules.ruleOptions).to.equal(ruleValue);
 };
 
 describe('Shortcut Tests', function () {
