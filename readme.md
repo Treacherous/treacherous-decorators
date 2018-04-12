@@ -24,18 +24,18 @@ The decorators are easy enough to use, just sprinkle them on any applicable prop
 
 ```ts
 import {createGroup} from "treacherous";
-import {withRule, createRulesetFor, createGroupFor} from "treacherous-decorators";
+import {required, email, matches, createRulesetFor, createGroupFor} from "treacherous-decorators";
 
 // Create a model and put your decorators on
 class SomeModel
 {
-    @withRule("required")
-    @withRule("email")
+    @required()
+    @email()
     public emailAddress = "";
 
-    @withRule("required")
-    @withRule("email")
-    @withRule("matches", "emailAddress")
+    @required()
+    @email()
+    @matches("emailAddress")
     public confirmEmailAddress = "";
 }
 
@@ -90,6 +90,10 @@ appliesIf?: (modelResolver: IModelResolver, value: any, ruleOptions?: any) => bo
 // The signature for the 4th parameter (messageOverride) are
 messageOverride?: (value: any, ruleOptions?: any) => string | string)
 ```
+
+#### Shortcuts
+
+There are now also shortcut decorators for all rules which can be used, i.e rather than `@withRule("required")` you can do `@required()`, all built in rules are exposed this way for consumption. They all wrap the `withRule` decorator so you can pass through message overrides etc.
 
 ### `@withRuleset`
 
