@@ -1,4 +1,4 @@
-import {Ruleset} from "treacherous";
+import {Ruleset} from "@treacherous/core";
 
 export const rulesetMetadataKey = Symbol("ruleset");
 

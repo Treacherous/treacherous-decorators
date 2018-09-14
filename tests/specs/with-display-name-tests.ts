@@ -1,5 +1,7 @@
+import "reflect-metadata";
+import {describe, it} from "mocha";
 import {use, expect, assert, spy} from "chai";
-import {Ruleset} from "treacherous";
+import {Ruleset} from "@treacherous/core";
 import * as spies from "chai-spies";
 use(spies);
 

@@ -1,4 +1,4 @@
-import { RuleLink } from "treacherous";
+import { RuleLink } from "@treacherous/core";
 import { getRulesetFromMetadata, updateRulesetMetadata } from "../helpers/metadata-helper";
 export function withRule(ruleName, ruleOptions, appliesIf, messageOverride) {
     return function (target, propertyKey) {

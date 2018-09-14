@@ -1,4 +1,4 @@
-import {ValidationGroupBuilder, Ruleset, IValidationGroup, createGroup} from "treacherous";
+import {ValidationGroupBuilder, Ruleset, IValidationGroup, createGroup} from "@treacherous/core";
 import {getRulesetFromMetadata} from "./helpers/metadata-helper";
 
 export function createRulesetFor(target: Object | any): Ruleset

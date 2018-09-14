@@ -1,4 +1,4 @@
-import {Ruleset, RuleLink} from "treacherous";
+import {Ruleset, RuleLink} from "@treacherous/core";
 import {getRulesetFromMetadata, updateRulesetMetadata} from "../helpers/metadata-helper";
 
 export function withDisplayName(displayName: string) {

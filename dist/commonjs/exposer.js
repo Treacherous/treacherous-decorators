@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var treacherous_1 = require("treacherous");
+var core_1 = require("@treacherous/core");
 var metadata_helper_1 = require("./helpers/metadata-helper");
 function createRulesetFor(target) { return metadata_helper_1.getRulesetFromMetadata(target); }
 exports.createRulesetFor = createRulesetFor;
 function createGroupFor(target, groupSetup) {
     var ruleset = createRulesetFor(target.constructor);
-    var validationGroup = treacherous_1.createGroup();
+    var validationGroup = core_1.createGroup();
     if (!groupSetup) {
         groupSetup(validationGroup);
     }

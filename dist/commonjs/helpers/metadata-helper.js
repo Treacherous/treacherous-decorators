@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var treacherous_1 = require("treacherous");
+var core_1 = require("@treacherous/core");
 exports.rulesetMetadataKey = Symbol("ruleset");
 function getRulesetFromMetadata(target) {
     var targetUsed = target.prototype || target;
@@ -8,7 +8,7 @@ function getRulesetFromMetadata(target) {
         return Reflect.getMetadata(exports.rulesetMetadataKey, targetUsed);
     }
     else {
-        return new treacherous_1.Ruleset();
+        return new core_1.Ruleset();
     }
 }
 exports.getRulesetFromMetadata = getRulesetFromMetadata;

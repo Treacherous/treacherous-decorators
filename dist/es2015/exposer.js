@@ -1,4 +1,4 @@
-import { createGroup } from "treacherous";
+import { createGroup } from "@treacherous/core";
 import { getRulesetFromMetadata } from "./helpers/metadata-helper";
 export function createRulesetFor(target) { return getRulesetFromMetadata(target); }
 export function createGroupFor(target, groupSetup) {

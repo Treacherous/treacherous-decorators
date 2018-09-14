@@ -1,4 +1,4 @@
-import { ForEachRule } from "treacherous";
+import { ForEachRule } from "@treacherous/core";
 import { getRulesetFromMetadata, updateRulesetMetadata } from "../helpers/metadata-helper";
 export function withRulesetForEach(ruleset) {
     return function (target, propertyKey) {
