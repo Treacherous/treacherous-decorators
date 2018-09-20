@@ -1,6 +1,6 @@
 {
   "name": "@treacherous/decorators",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "dependencies": {
     "@treacherous/core": "^0.17.6"
   },

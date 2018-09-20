@@ -13,7 +13,7 @@ Adds the ability to use decorators to setup your model validation rules.
 Just do an:
 
 ```
-npm install treacherous-decorators
+npm install @treacherous/decorators
 ```
 
 You will also need to make sure that you have some working polyfill for the stage 0 proposed metadata, you can use [`core-js`](https://github.com/zloirock/core-js) which has this or [`reflect-metadata`](https://github.com/rbuckton/reflect-metadata) library.
@@ -23,8 +23,8 @@ You will also need to make sure that you have some working polyfill for the stag
 The decorators are easy enough to use, just sprinkle them on any applicable properties within your models like so:
 
 ```ts
-import {createGroup} from "treacherous";
-import {required, email, matches, createRulesetFor, createGroupFor} from "treacherous-decorators";
+import {createGroup} from "@treacherous/core";
+import {required, email, matches, createRulesetFor, createGroupFor} from "@treacherous/decorators";
 
 // Create a model and put your decorators on
 class SomeModel
